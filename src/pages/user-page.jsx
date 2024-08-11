@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 import { useGetSingleItem } from '../hooks/use-get-data'
+import { Card } from 'antd'
 
 export const UserPage = () => {
     const { id } = useParams()
@@ -16,14 +17,21 @@ export const UserPage = () => {
     }
 
     return (
+        
         <article className='size-60 rounded-lg bg-blue-500 p-4 mt-20 mx-auto'>
-            <img
-                className='size-20 mx-auto rounded-full'
-                src={data.avatar}
-                alt={data.name}
-            />
-            <h1 className='text-center text-3xl text-white mt-4'>{data.name}</h1>
-            <div className='text-center text-xl text-slate-300 mt-2'>{data.email}</div>
+            <Card
+                style={{
+                    width: 200,
+                }}
+                >
+                <img
+                    className='size-20 mx-auto rounded-full'
+                    src={data.avatar}
+                    alt={data.name}
+                />
+                <h1 className='text-center text-3xl text-white mt-4'>{data.name}</h1>
+                <div className='text-center text-xl text-slate-300 mt-2'>{data.email}</div>
+            </Card>
         </article>
     )
 }

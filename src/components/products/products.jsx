@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { useGetData } from '../../hooks/use-get-data'
 import { CardList } from './card-list'
-import { Table } from './table'
+import { ProductsTable } from './productsTable'
 
 export const Products = () => {
 
@@ -20,7 +20,7 @@ export const Products = () => {
     )
   } else {
     return (
-      <Table products={products} viewSwitchHandler={viewSwitchHandler} loading={loading} />
+      <ProductsTable products={products} viewSwitchHandler={viewSwitchHandler} loading={loading} />
     )
   }
 }
