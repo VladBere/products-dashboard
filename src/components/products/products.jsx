@@ -17,8 +17,6 @@ if (categorySelectValue === null) {
   endpoint = `/categories/${categorySelectValue}/products`
 }
 
-//зроби хендлер для категорыъ ы пропсом передай 
-
   const {
       data: products,
       loading,
