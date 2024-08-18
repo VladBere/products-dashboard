@@ -11,14 +11,14 @@ export const CardList = ({products, viewSwitchHandler, loading}) => {
         <Row gutter={16}>
             {products.map(i => {
               return (
-                <Col span={4}>
+                <Col key={i.id} span={4}>
                     <Card
                     title={i.title}
                     style={{
                       width: 300,
                     }}
                   >
-                  <img src="https://i1.sndcdn.com/artworks-95xJDyi1WmV9SEtE-8Kx8IA-t500x500.jpg" alt={i.title} className='w-'/> 
+                  <img src={i.images[0]} alt={i.title} className='w-'/> 
                   <div className='p-3'>
                       <p className='font-bold'>{i.category.name}</p>
                       <Tooltip title={i.description}>

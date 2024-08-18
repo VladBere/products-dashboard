@@ -28,7 +28,7 @@ export const useGetSingleItem = ({ endpoint, id }) => {
 
 export const useGetData = ({ endpoint, queryParamsObject }) => {
     const queryParams = new URLSearchParams(queryParamsObject)?.toString()
-
+    
     const [data, setData] = React.useState([])
     const [error, setError] = React.useState(null)
     const [isLoading, setIsLoading] = React.useState(true)

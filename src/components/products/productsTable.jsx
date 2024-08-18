@@ -5,14 +5,14 @@ export const ProductsTable = ({products, viewSwitchHandler, loading}) => {
 
     const trunc = (text, maxLenght) => text?.length > maxLenght ? text?.substring(0, maxLenght - 3) + "..." : text;
 
-    const dataSource = products.map(i => ({
-        key: i.id,
-        title: i.title,
-        price: i.price,
-        category: i.category.name,
+    const dataSource = products.map(product => ({
+        key: product.id,
+        title: product.title,
+        price: product.price,
+        category: product.category.name,
         description:
-            <Tooltip title={i.description}>
-                <p>{trunc(i.description, 100)}</p>
+            <Tooltip title={product.description}>
+                <p>{trunc(product.description, 100)}</p>
             </Tooltip>,
     }))
 
